@@ -1,0 +1,39 @@
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  width: 100%;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 320px) {
+  .responsive-padding {
+    padding: 0.75rem;
+  }
+  
+  button, .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .app-container {
+    align-items: center;
+  }
+  
+  .max-width-large {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
