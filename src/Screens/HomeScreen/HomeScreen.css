@@ -81,9 +81,31 @@
 }
 
 @media (max-width: 480px) {
+  .chat-header {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+
+  .back-button {
+    padding: 4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
+  }
+
+  .chat-header-center {
+    flex-grow: 1;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
   .chat-avatar {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
   .chat-contact-info h4 {
@@ -94,13 +116,19 @@
     font-size: 11px;
   }
 
-  .chat-header {
-    gap: 6px;
-    padding: 8px;
-  }
-
   .chat-header-buttons {
     gap: 6px;
+  }
+
+  .icon-button {
+    padding: 4px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .chat-header-buttons .icon-button:nth-child(n+2) {
+    display: none; 
   }
 }
 
