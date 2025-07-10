@@ -3,7 +3,6 @@
   height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #111;
   background-color: #fff;
   display: flex;
@@ -34,6 +33,8 @@
   padding: 20px;
   background-color: #fff;
   border-top: 1px solid #ddd;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .action-button-1 {
@@ -45,6 +46,8 @@
   border-radius: 12px;
   min-width: 120px;
   transition: all 0.3s ease;
+  flex: 1 1 30%;
+  max-width: 150px;
 }
 
 .action-button-1:last-child {
@@ -86,7 +89,7 @@
 
 .detail-section-1 p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #057a55;
 }
 
@@ -100,4 +103,93 @@
   cursor: pointer;
   color: white;
   z-index: 10;
+}
+
+.more-options-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .contact-detail-avatar-1 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .action-button-1 {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-detail-avatar-1 {
+    width: 90px;
+    height: 90px;
+  }
+
+  .action-button-1 {
+    min-width: 90px;
+    padding: 10px;
+  }
+
+  .detail-section-1 h3 {
+    font-size: 16px;
+  }
+
+  .detail-section-1 p {
+    font-size: 13px;
+  }
+
+  .back-button {
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header-1 {
+    padding: 20px 10px;
+  }
+
+  .contact-detail-avatar-1 {
+    width: 75px;
+    height: 75px;
+  }
+
+  .action-button-1 {
+    min-width: 80px;
+    max-width: 100px;
+    padding: 8px;
+  }
+
+  .action-button-1 span {
+    font-size: 12px;
+  }
+
+  .contact-info-section-1 {
+    padding: 20px 10px;
+  }
+
+  .detail-section-1 h3 {
+    font-size: 14px;
+  }
+
+  .detail-section-1 p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .contact-detail-container-1 {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }

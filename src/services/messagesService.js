@@ -1,12 +1,7 @@
-import mock_data from "../data/contact_mock"
-
+import mock_data from "../data/contact_mock";
 
 export const getMessagesByContactId = (contact_id) => {
-    for(const contact of mock_data.contacts){
-        if(Number(contact.id) === Number(contact_id)){
-            return contact.messages
-        }
-    }
-
-    return null
-}
+  const id = Number(contact_id);
+  const contact = mock_data.contacts.find(c => Number(c.id) === id);
+  return contact ? contact.messages : null;
+};

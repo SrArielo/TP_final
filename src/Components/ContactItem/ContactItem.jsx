@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../assets/styles/ContactItem.css";
+import "./ContactItem.css";
 
 const ContactItem = ({ name, id, last_time_connected, img, last_message, unread_messages }) => {
     return (

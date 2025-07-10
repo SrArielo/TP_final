@@ -1,4 +1,4 @@
-import "../../assets/styles/LoaderSpinner.css"
+import "./LoaderSpinner.css"
 
 export default function LoaderSpinner() {
     return (

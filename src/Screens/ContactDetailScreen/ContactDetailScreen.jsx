@@ -2,7 +2,9 @@ import React, { useContext, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ContactDetailContext } from '../../Context/ContactDetailContext';
 import LoaderSpinner from '../../Components/LoaderSpinner/LoaderSpinner';
-import "../../assets/styles/ContactDetailScreen.css";
+import "./ContactDetailScreen.css";
+import { FiCamera, FiSearch, FiMoreVertical, FiArrowLeft } from 'react-icons/fi';
+
 
 export default function ContactDetailScreen() {
   const { contact_id } = useParams();
@@ -19,19 +21,26 @@ export default function ContactDetailScreen() {
 
   return (
     <div className="contact-detail-container-1">
-      {/* Flecha para volver */}
       <button className="back-button" onClick={() => navigate(-1)}>
-        &#8592;
+        <FiArrowLeft size={24} />
       </button>
 
-      <div className="contact-header-1">
-        <img
-          src={contact_detail.img}
-          alt={contact_detail.name}
-          className="contact-detail-avatar-1"
-        />
-        <h2>{contact_detail.name}</h2>
-      </div>
+    <div className="contact-header-1">
+      <button className="back-button" onClick={() => navigate(-1)}>
+        <FiArrowLeft size={24} />
+      </button>
+
+      <button className="more-options-button">
+        <FiMoreVertical size={24} />
+      </button>
+
+      <img
+        src={contact_detail.img}
+        alt={contact_detail.name}
+        className="contact-detail-avatar-1"
+      />
+      <h2>{contact_detail.name}</h2>
+    </div>
 
       <div className="contact-actions-1">
         <div className="action-button-1">

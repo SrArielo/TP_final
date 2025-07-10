@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import Message from '../Message/Message';
 import { MessagesContext } from '../../Context/MessagesContext';
-import "../../assets/styles/Chat.css"; 
+import './Chat.css';
 
 export default function Chat() {
   const { messages } = useContext(MessagesContext);
@@ -11,7 +11,7 @@ export default function Chat() {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  if (messages.length === 0) {
+  if (!messages || messages.length === 0) {
     return (
       <div className="chat-container chat-no-messages">
         <span>No hay mensajes aún</span>
@@ -22,14 +22,7 @@ export default function Chat() {
   return (
     <div className="chat-container">
       {messages.map((message) => (
-        <Message
-          key={message.id}
-          emisor={message.emisor}
-          id={message.id}
-          hora={message.hora}
-          texto={message.texto}
-          status={message.status}
-        />
+        <Message key={message.id} {...message} />
       ))}
       <div ref={bottomRef} />
     </div>

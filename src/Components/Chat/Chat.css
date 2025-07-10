@@ -1,10 +1,10 @@
 .chat-container {
-  background-image: url("https://i.pinimg.com/736x/c2/d6/e8/c2d6e8bf43e7bd6444705255acc28dd3.jpg"); 
+  background-image: url("https://i.pinimg.com/736x/31/04/e0/3104e02012ee109335a5ca2fc52b81db.jpg"); 
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 12px;
-  height: calc(100vh - 160px);
+  height: calc(110vh - 160px);
   box-sizing: border-box;
 }
 
@@ -14,7 +14,7 @@
   text-align: center;
   color: #999;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 17px;
   padding: 20px;
 }
 
@@ -24,7 +24,7 @@
   }
 
   .chat-no-messages {
-    font-size: 1rem;
+    font-size: 16px;
     padding: 16px;
   }
 }
@@ -32,6 +32,12 @@
 @media (min-width: 481px) and (max-width: 1024px) {
   .chat-container {
     padding: 12px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .chat-container {
+    padding: 20px;
   }
 }
 
