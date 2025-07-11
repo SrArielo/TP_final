@@ -32,6 +32,7 @@ export default function HomeScreen() {
     <div className="app-container-1">
       <div className="chat-screen">
 
+        {/* HEADER */}
         <div className="chat-header">
           <div className="chat-header-left">
             <button className="back-button" onClick={() => navigate(-1)}>
@@ -40,16 +41,18 @@ export default function HomeScreen() {
           </div>
 
           <div className="chat-header-center">
-            <img
-              src={contact.img}
-              alt={contact.name}
-              className="chat-avatar"
-              onClick={() => navigate(`/contacts/${contact.id}`)}
-              style={{ cursor: 'pointer' }}
-            />
-            <div className="chat-contact-info">
-              <h4>{contact.name}</h4>
-              <small>Última conexión: {contact.last_time_connected}</small>
+            <div className="chat-header-info">
+              <img
+                src={contact.img}
+                alt={contact.name}
+                className="chat-avatar"
+                onClick={() => navigate(`/contacts/${contact.id}`)}
+                style={{ cursor: 'pointer' }}
+              />
+              <div className="chat-contact-info">
+                <h4>{contact.name}</h4>
+                <small>Última conexión: {contact.last_time_connected}</small>
+              </div>
             </div>
           </div>
 
