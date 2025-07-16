@@ -32,7 +32,6 @@ export default function HomeScreen() {
     <div className="app-container-1">
       <div className="chat-screen">
 
-        {/* HEADER */}
         <div className="chat-header">
           <div className="chat-header-left">
             <button className="back-button" onClick={() => navigate(-1)}>

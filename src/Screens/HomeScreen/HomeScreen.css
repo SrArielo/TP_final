@@ -91,63 +91,6 @@
   gap: 10px;
 }
 
-@media (max-width: 360px) {
-  .chat-header {
-    display: flex;
-    align-items: center;
-    height: 65px;
-  }
-
-  .back-button {
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    margin: 0;
-    font-size: 20px;
-  }
-
-  .chat-avatar {
-    width: 36px;
-    height: 36px;
-  }
-
-  .chat-header-center {
-    gap: 6px;
-  }
-
-  .chat-contact-info h4 {
-    font-size: 12px;
-  }
-
-  .chat-contact-info small {
-    font-size: 10px;
-  }
-
-  .chat-header-info {
-    gap: 6px;
-  }
-
-  .chat-header-right {
-    gap: 2px;
-  }
-
-  .icon-button {
-    padding: 2px;
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-  }
-
-  .chat-header-right .icon-button:nth-child(1),
-  .chat-header-right .icon-button:nth-child(2) {
-    display: none;
-  }
-}
-
 @media (max-width: 480px) {
   .chat-header {
     padding: 6px 8px;
